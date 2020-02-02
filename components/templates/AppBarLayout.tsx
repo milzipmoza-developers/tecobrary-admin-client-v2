@@ -22,6 +22,7 @@ const AppBarLayout = ({children}: IProps) => {
                     <Nav.Link href="/">대시보드</Nav.Link>
                     <Nav.Link href="/users">회원 관리</Nav.Link>
                     <Nav.Link href="/books">장서 관리</Nav.Link>
+                    <Nav.Link href="/histories">대여 내역 관리</Nav.Link>
                     <Nav.Link href="/wishes">희망도서 관리</Nav.Link>
                 </Nav>
                 <Form inline>
