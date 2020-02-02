@@ -1,3 +1,14 @@
-const Home = () => <h1>Hello world!</h1>;
+import * as React from "react";
+import AppBarLayout from "../components/templates/AppBarLayout";
 
-export default Home;
+const Index = () => {
+    return (
+        <AppBarLayout>
+            <div>
+                대시보드
+            </div>
+        </AppBarLayout>
+    );
+};
+
+export default Index;
