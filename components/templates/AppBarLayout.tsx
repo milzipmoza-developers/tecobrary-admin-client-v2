@@ -21,7 +21,7 @@ const NotLoggedInAppBar = () => (
 );
 
 const LoggedInAppBar = () => (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" style={{minWidth: '1120px'}}>
         <Navbar.Brand href="/">테코브러리 어드민</Navbar.Brand>
         <Nav className="mr-auto">
             <Nav.Link href="/dashboard">대시보드</Nav.Link>

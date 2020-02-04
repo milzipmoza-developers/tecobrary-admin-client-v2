@@ -1,27 +1,16 @@
 import * as React from "react";
-import {CSSProperties} from "react";
+import {Col, Row} from "react-bootstrap";
 
 interface IProps {
     children: any;
 }
 
-const outer: CSSProperties = {
-    width: '100%',
-    height: '100%',
-};
-
-const inner: CSSProperties = {
-    marginTop: '10vh',
-    marginLeft: '15vw',
-    marginRight: '15vw',
-};
-
 const ContentLayout = ({children}: IProps) => (
-    <div className='outer-content-layout' style={outer}>
-        <div className="inner-content-layout" style={inner}>
+    <Row style={{justifyContent: 'center'}}>
+        <Col lg={11} xl={8} style={{padding: '4px', minWidth: '1120px', marginTop: '28px', marginBottom: '28px'}}>
             {children}
-        </div>
-    </div>
+        </Col>
+    </Row>
 );
 
 export default ContentLayout;
