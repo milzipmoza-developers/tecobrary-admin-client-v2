@@ -21,8 +21,8 @@ const RentHistoryElement = (history: IHistory) => {
         <Row className="rent-history-element">
             <RentHistoryItem sm={3}>{`${formatDate(history.rentDate)}`}</RentHistoryItem>
             <RentHistoryItem sm={2}>{`${calculateTerm(history.rentDate)} 일 전`}</RentHistoryItem>
-            <RentHistoryItem sm={3}>{history.title}</RentHistoryItem>
-            <RentHistoryItem sm={2}>{history.serialNumber}</RentHistoryItem>
+            <RentHistoryItem sm={4}>{history.title}</RentHistoryItem>
+            <RentHistoryItem sm={1}>{history.serialNumber}</RentHistoryItem>
             <RentHistoryItem sm={2}>{history.userName}</RentHistoryItem>
         </Row>
     );
