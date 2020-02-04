@@ -41,6 +41,9 @@ const AppBarLayout = ({isLoggedIn, children}: IProps) => {
     return (
         <div style={style}>
             {isLoggedIn ? <LoggedInAppBar/> : <NotLoggedInAppBar/>}
+            <div className="body-content-wrapper">
+                {children}
+            </div>
         </div>
     );
 };
