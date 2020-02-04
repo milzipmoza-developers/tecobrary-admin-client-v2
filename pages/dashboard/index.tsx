@@ -4,6 +4,8 @@ import ContentLayout from "../../components/templates/ContentLayout";
 import {Card, Col, Image, ListGroup, Row} from "react-bootstrap";
 import RentHistoryItem from "../../components/atoms/RentHistoryItem";
 import LongTermRentHistories from "../../components/templates/LongTermRentHistories";
+import ProfileCardHeader from "../../components/molecules/ProfileCardHeader";
+import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
 
 const longTerms: IHistory[] = [
     {
@@ -36,36 +38,7 @@ const Index = () => {
                         <LongTermRentHistories histories={longTerms}/>
                     </Col>
                     <Col sm={4}>
-                        <Card body style={{height: '270px'}}>
-                            <Card.Body>
-                                <Row>
-                                    <Col sm={4}>
-                                        <Image src="https://avatars0.githubusercontent.com/u/52121827?s=460&v=4"
-                                               style={{width: 'inherit', border: '1px solid gray'}}
-                                               roundedCircle/>
-                                    </Col>
-                                    <Col sm={8}>
-                                        <div style={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            height: '100%',
-                                            justifyContent: 'center'
-                                        }}>
-                                            <Card.Title>"ㅇㅇ"님 환영합니다.</Card.Title>
-                                            <Card.Subtitle
-                                                className="mb-2 text-muted">thedevluffy@gmail.com</Card.Subtitle>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Card.Text>
-                                    관리자 모드
-                                </Card.Text>
-                                <Row style={{alignSelf: 'flex-end'}}>
-                                    <Card.Link href="#">로그아웃</Card.Link>
-                                    <Card.Link href="#">내 정보 관리</Card.Link>
-                                </Row>
-                            </Card.Body>
-                        </Card>
+                        <LoginUserProfileCard userName="루피" userEmail="thedevluffy@gmail.com"/>
                     </Col>
                 </Row>
                 <Row style={{marginTop: '24px'}}>
