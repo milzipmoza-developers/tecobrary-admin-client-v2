@@ -4,7 +4,7 @@ import ContentLayout from "../../components/templates/ContentLayout";
 
 const Index = () => {
     return (
-        <AppBarLayout>
+        <AppBarLayout isLoggedIn={true}>
             <ContentLayout>
                 희망 도서 관리
             </ContentLayout>
