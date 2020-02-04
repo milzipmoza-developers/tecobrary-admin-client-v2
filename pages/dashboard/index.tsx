@@ -1,8 +1,31 @@
 import * as React from "react";
 import AppBarLayout from "../../components/templates/AppBarLayout";
 import ContentLayout from "../../components/templates/ContentLayout";
-import {Card, Col, Row, Image, ListGroup} from "react-bootstrap";
-import HistoryItem from "../../components/atoms/HistoryItem";
+import {Card, Col, Image, ListGroup, Row} from "react-bootstrap";
+import RentHistoryItem from "../../components/atoms/RentHistoryItem";
+import LongTermRentHistories from "../../components/templates/LongTermRentHistories";
+
+const longTerms: IHistory[] = [
+    {
+        rentDate: '1980-01-01T01:01:00.000',
+        title: '객체지향의 사실과 오해',
+        serialNumber: '1',
+        userName: '루피'
+    },
+    {
+        rentDate: '2000-01-01T01:01:00.000',
+        title: '오브젝트',
+        serialNumber: '132',
+        userName: '루피'
+    },
+];
+
+export interface IHistory {
+    rentDate: string;
+    title: string;
+    serialNumber: string;
+    userName: string;
+}
 
 const Index = () => {
     return (
@@ -10,29 +33,7 @@ const Index = () => {
             <ContentLayout>
                 <Row>
                     <Col sm={8}>
-                        <Card style={{height: '270px'}}>
-                            <Card.Header as="h5">장기 대여자</Card.Header>
-                            <div style={{overflow: 'scroll'}}>
-                                <ListGroup variant="flush">
-                                    <ListGroup.Item>
-                                        <Row>
-                                            <HistoryItem sm={3}>대여일 - "대여일"</HistoryItem>
-                                            <HistoryItem sm={3}>대여 기간 - "대여 기간"</HistoryItem>
-                                            <HistoryItem sm={3}>"제목"</HistoryItem>
-                                            <HistoryItem sm={3}>"대여자"</HistoryItem>
-                                        </Row>
-                                    </ListGroup.Item>
-                                    <ListGroup.Item>
-                                        <Row>
-                                            <HistoryItem sm={3}>대여일 - "대여일"</HistoryItem>
-                                            <HistoryItem sm={3}>대여 기간 - "대여 기간"</HistoryItem>
-                                            <HistoryItem sm={3}>"제목"</HistoryItem>
-                                            <HistoryItem sm={3}>"대여자"</HistoryItem>
-                                        </Row>
-                                    </ListGroup.Item>
-                                </ListGroup>
-                            </div>
-                        </Card>
+                        <LongTermRentHistories histories={longTerms}/>
                     </Col>
                     <Col sm={4}>
                         <Card body style={{height: '270px'}}>
@@ -57,22 +58,34 @@ const Index = () => {
                                     </Col>
                                 </Row>
                                 <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    관리자 모드
                                 </Card.Text>
-                                <Card.Link href="#">로그아웃</Card.Link>
-                                <Card.Link href="#">내 정보 관리</Card.Link>
+                                <Row style={{alignSelf: 'flex-end'}}>
+                                    <Card.Link href="#">로그아웃</Card.Link>
+                                    <Card.Link href="#">내 정보 관리</Card.Link>
+                                </Row>
                             </Card.Body>
                         </Card>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        대시보드
-                        <div>1. 어드민 회원 정보</div>
-                        <div>2. 희망 도서 정보</div>
-                        <div>3. 장기 대여자 정보</div>
-                        <div>4. 관련 사이트 링크</div>
+                <Row style={{marginTop: '24px'}}>
+                    <Col sm={12}>
+                        <Card style={{width: '100%'}}>
+                            <Card.Header as="h5">희망도서</Card.Header>
+                            <div style={{overflow: 'scroll'}}>
+                                <ListGroup variant="flush">
+                                    <ListGroup.Item>
+                                        <Row>
+                                            <RentHistoryItem sm={4}>도서 제목 - "도서"</RentHistoryItem>
+                                            <RentHistoryItem sm={3}>신청 일시 - "대여 기간"</RentHistoryItem>
+                                            <RentHistoryItem sm={3}>신청자</RentHistoryItem>
+                                            <RentHistoryItem sm={1}>구매링크</RentHistoryItem>
+                                            <RentHistoryItem sm={1}>처리완료</RentHistoryItem>
+                                        </Row>
+                                    </ListGroup.Item>
+                                </ListGroup>
+                            </div>
+                        </Card>
                     </Col>
                 </Row>
             </ContentLayout>

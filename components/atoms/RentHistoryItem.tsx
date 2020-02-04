@@ -7,10 +7,10 @@ interface IProps {
     i?: number;
 }
 
-const HistoryItem = ({sm, i, children}: IProps) => (
+const RentHistoryItem = ({sm, i, children}: IProps) => (
     <Col id={`history-item-${i}`} sm={sm} style={{textAlign: 'center'}}>
         {children}
     </Col>
 );
 
-export default HistoryItem;
+export default RentHistoryItem;
