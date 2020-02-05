@@ -1,4 +1,4 @@
-import {Card, Col, Image, Row} from "react-bootstrap";
+import {Button, Card, Col, Image, Row} from "react-bootstrap";
 import ProfileCardHeader from "../molecules/ProfileCardHeader";
 import * as React from "react";
 
@@ -17,7 +17,7 @@ const LoginUserProfileCard = ({userName, userEmail}: IProps) => {
         console.log('LoginUserProfileCard.tsx - myInfoBtnHandler');
     };
 
-    return(
+    return (
         <Card body style={{height: '270px'}}>
             <Card.Body>
                 <Row>
@@ -33,13 +33,17 @@ const LoginUserProfileCard = ({userName, userEmail}: IProps) => {
                 <Card.Text>
                     관리자 모드
                 </Card.Text>
-                <Row style={{alignSelf: 'flex-end'}}>
-                    <Card.Link onClick={logoutBtnHandler}>로그아웃</Card.Link>
-                    <Card.Link onClick={myInfoBtnHandler}>내 정보 관리</Card.Link>
-                </Row>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-end'}}>
+                    <div style={{margin: '4px'}}>
+                        <Button variant="primary" onClick={myInfoBtnHandler}>내 정보 관리</Button>
+                    </div>
+                    <div style={{margin: '4px'}}>
+                        <Button variant="warning" onClick={logoutBtnHandler}>로그아웃</Button>
+                    </div>
+                </div>
             </Card.Body>
         </Card>
     );
-}
+};
 
 export default LoginUserProfileCard;
