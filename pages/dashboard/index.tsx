@@ -1,10 +1,6 @@
 import * as React from "react";
 import AppBarContainer from "../../components/organisms/containers/AppBarContainer";
-import ContentContainer from "../../components/organisms/containers/ContentContainer";
-import {Col, Row} from "react-bootstrap";
-import LongTermRentHistoryCard from "../../components/organisms/LongTermRentHistoryCard";
-import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
-import WishBookSummaryCard from "../../components/organisms/WishBookSummaryCard";
+import DashBoardTemplate from "../../components/templates/DashBoardTemplate";
 
 const longTerms: IHistory[] = [
     {
@@ -91,21 +87,7 @@ export interface IWishBook {
 const Index = () => {
     return (
         <AppBarContainer isLoggedIn={true}>
-            <ContentContainer>
-                <Row>
-                    <Col sm={8}>
-                        <LongTermRentHistoryCard histories={longTerms}/>
-                    </Col>
-                    <Col sm={4}>
-                        <LoginUserProfileCard userName="루피" userEmail="thedevluffy@gmail.com"/>
-                    </Col>
-                </Row>
-                <Row style={{marginTop: '24px'}}>
-                    <Col sm={12}>
-                        <WishBookSummaryCard wishBooks={wishBooks}/>
-                    </Col>
-                </Row>
-            </ContentContainer>
+            <DashBoardTemplate histories={longTerms} wishBooks={wishBooks}/>
         </AppBarContainer>
     );
 };
