@@ -1,7 +1,7 @@
 import {ListGroup} from "react-bootstrap";
 import RentHistoryElement from "../molecules/RentHistoryElement";
 import * as React from "react";
-import {IHistory} from "../../pages/dashboard";
+import {IHistory} from "../../models/interfaces";
 
 interface IProps {
     histories: IHistory[];

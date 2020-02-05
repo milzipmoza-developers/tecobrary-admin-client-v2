@@ -1,8 +1,8 @@
 import {Card, ListGroup} from "react-bootstrap";
 import WishBookSummaryElement from "../molecules/WishBookSummaryElement";
 import * as React from "react";
-import {IWishBook} from "../../pages/dashboard";
 import {useRouter} from "next/router";
+import {IWishBook} from "../../models/interfaces";
 
 interface IProps {
     wishBooks: IWishBook[];

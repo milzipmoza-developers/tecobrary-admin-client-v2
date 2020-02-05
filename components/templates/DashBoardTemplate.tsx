@@ -4,7 +4,7 @@ import LongTermRentHistoryCard from "../organisms/LongTermRentHistoryCard";
 import LoginUserProfileCard from "../organisms/LoginUserProfileCard";
 import WishBookSummaryCard from "../organisms/WishBookSummaryCard";
 import * as React from "react";
-import {IHistory, IWishBook} from "../../pages/dashboard";
+import {IHistory, IWishBook} from "../../models/interfaces";
 
 interface IProps {
     histories: IHistory[];

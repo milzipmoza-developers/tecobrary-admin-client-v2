@@ -1,8 +1,8 @@
 import {Card} from "react-bootstrap";
 import RentHistoryList from "./RentHistoryList";
 import * as React from "react";
-import {IHistory} from "../../pages/dashboard";
 import {useRouter} from "next/router";
+import {IHistory} from "../../models/interfaces";
 
 interface IProps {
     histories: IHistory[];

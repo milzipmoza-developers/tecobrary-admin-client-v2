@@ -1,6 +1,7 @@
 import * as React from "react";
 import AppBarContainer from "../../components/organisms/containers/AppBarContainer";
 import DashBoardTemplate from "../../components/templates/DashBoardTemplate";
+import {IHistory, IWishBook} from "../../models/interfaces";
 
 const longTerms: IHistory[] = [
     {
@@ -68,21 +69,6 @@ const wishBooks: IWishBook[] = [
         createTime: '2020-01-01T13:13:13.000',
     },
 ];
-
-export interface IHistory {
-    rentDate: string;
-    title: string;
-    serialNumber: string;
-    userName: string;
-}
-
-export interface IWishBook {
-    id: string;
-    title: string;
-    userName: string;
-    buyLink: string;
-    createTime: string;
-}
 
 const Index = () => {
     return (
