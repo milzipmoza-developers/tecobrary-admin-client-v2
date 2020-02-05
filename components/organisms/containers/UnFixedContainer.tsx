@@ -1,4 +1,3 @@
-import AppBarLayout from "./AppBarLayout";
 import * as React from "react";
 import {CSSProperties} from "react";
 
@@ -17,7 +16,7 @@ const inner: CSSProperties = {
     marginRight: '15vw',
 };
 
-const UnFixedLayout = ({children}: IProps) => (
+const UnFixedContainer = ({children}: IProps) => (
     <div className='outer-content-layout' style={outer}>
         <div className="inner-content-layout" style={inner}>
             {children}
@@ -25,4 +24,4 @@ const UnFixedLayout = ({children}: IProps) => (
     </div>
 );
 
-export default UnFixedLayout;
+export default UnFixedContainer;

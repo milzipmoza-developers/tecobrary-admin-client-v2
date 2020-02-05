@@ -1,6 +1,6 @@
 import * as React from "react";
-import AppBarLayout from "../../components/templates/AppBarLayout";
-import ContentLayout from "../../components/templates/ContentLayout";
+import AppBarContainer from "../../components/organisms/containers/AppBarContainer";
+import ContentContainer from "../../components/organisms/containers/ContentContainer";
 import {Col, Row} from "react-bootstrap";
 import LongTermRentHistoryCard from "../../components/organisms/LongTermRentHistoryCard";
 import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
@@ -90,8 +90,8 @@ export interface IWishBook {
 
 const Index = () => {
     return (
-        <AppBarLayout isLoggedIn={true}>
-            <ContentLayout>
+        <AppBarContainer isLoggedIn={true}>
+            <ContentContainer>
                 <Row>
                     <Col sm={8}>
                         <LongTermRentHistoryCard histories={longTerms}/>
@@ -105,8 +105,8 @@ const Index = () => {
                         <WishBookSummaryCard wishBooks={wishBooks}/>
                     </Col>
                 </Row>
-            </ContentLayout>
-        </AppBarLayout>
+            </ContentContainer>
+        </AppBarContainer>
     );
 };
 
