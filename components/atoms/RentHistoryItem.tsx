@@ -1,15 +1,24 @@
 import {Col} from "react-bootstrap";
 import * as React from "react";
+import {CSSProperties} from "react";
 
 interface IProps {
     sm: number;
-    children: string;
-    i?: number;
+    children: any;
 }
 
-const RentHistoryItem = ({sm, i, children}: IProps) => (
-    <Col id={`history-item-${i}`} sm={sm} style={{textAlign: 'center'}}>
-        {children}
+const childrenWrapper: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '100%'
+};
+
+const RentHistoryItem = ({sm, children}: IProps) => (
+    <Col sm={sm} style={{textAlign: 'center'}}>
+        <div style={childrenWrapper}>
+            {children}
+        </div>
     </Col>
 );
 

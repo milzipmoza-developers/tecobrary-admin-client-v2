@@ -1,11 +1,10 @@
 import * as React from "react";
 import AppBarLayout from "../../components/templates/AppBarLayout";
 import ContentLayout from "../../components/templates/ContentLayout";
-import {Card, Col, Image, ListGroup, Row} from "react-bootstrap";
-import RentHistoryItem from "../../components/atoms/RentHistoryItem";
+import {Col, Row} from "react-bootstrap";
 import LongTermRentHistories from "../../components/templates/LongTermRentHistories";
-import ProfileCardHeader from "../../components/molecules/ProfileCardHeader";
 import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
+import WishBookSummaryCard from "../../components/organisms/WishBookSummaryCard";
 
 const longTerms: IHistory[] = [
     {
@@ -22,11 +21,71 @@ const longTerms: IHistory[] = [
     },
 ];
 
+const wishBooks: IWishBook[] = [
+    {
+        id: '1',
+        title: '세븐 데이터베이스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/8595403?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+    {
+        id: '2',
+        title: '시작하세요! 도커/쿠버네티스',
+        userName: '루피',
+        buyLink: 'http://www.yes24.com/Product/Goods/84927385?Acode=101',
+        createTime: '2020-01-01T13:13:13.000',
+    },
+];
+
 export interface IHistory {
     rentDate: string;
     title: string;
     serialNumber: string;
     userName: string;
+}
+
+export interface IWishBook {
+    id: string;
+    title: string;
+    userName: string;
+    buyLink: string;
+    createTime: string;
 }
 
 const Index = () => {
@@ -43,22 +102,7 @@ const Index = () => {
                 </Row>
                 <Row style={{marginTop: '24px'}}>
                     <Col sm={12}>
-                        <Card style={{width: '100%'}}>
-                            <Card.Header as="h5">희망도서</Card.Header>
-                            <div style={{overflow: 'scroll'}}>
-                                <ListGroup variant="flush">
-                                    <ListGroup.Item>
-                                        <Row>
-                                            <RentHistoryItem sm={4}>도서 제목 - "도서"</RentHistoryItem>
-                                            <RentHistoryItem sm={3}>신청 일시 - "대여 기간"</RentHistoryItem>
-                                            <RentHistoryItem sm={3}>신청자</RentHistoryItem>
-                                            <RentHistoryItem sm={1}>구매링크</RentHistoryItem>
-                                            <RentHistoryItem sm={1}>처리완료</RentHistoryItem>
-                                        </Row>
-                                    </ListGroup.Item>
-                                </ListGroup>
-                            </div>
-                        </Card>
+                        <WishBookSummaryCard wishBooks={wishBooks}/>
                     </Col>
                 </Row>
             </ContentLayout>
