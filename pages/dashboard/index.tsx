@@ -2,7 +2,7 @@ import * as React from "react";
 import AppBarLayout from "../../components/templates/AppBarLayout";
 import ContentLayout from "../../components/templates/ContentLayout";
 import {Col, Row} from "react-bootstrap";
-import LongTermRentHistories from "../../components/templates/LongTermRentHistories";
+import LongTermRentHistoryCard from "../../components/organisms/LongTermRentHistoryCard";
 import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
 import WishBookSummaryCard from "../../components/organisms/WishBookSummaryCard";
 
@@ -94,7 +94,7 @@ const Index = () => {
             <ContentLayout>
                 <Row>
                     <Col sm={8}>
-                        <LongTermRentHistories histories={longTerms}/>
+                        <LongTermRentHistoryCard histories={longTerms}/>
                     </Col>
                     <Col sm={4}>
                         <LoginUserProfileCard userName="루피" userEmail="thedevluffy@gmail.com"/>
