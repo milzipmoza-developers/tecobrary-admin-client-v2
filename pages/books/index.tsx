@@ -1,6 +1,6 @@
 import * as React from "react";
-import AppBarContainer from "../../components/organisms/containers/AppBarContainer";
-import ContentContainer from "../../components/organisms/containers/ContentContainer";
+import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
+import ContentContainer from "../../src/components/organisms/containers/ContentContainer";
 
 const Index = () => {
     return (

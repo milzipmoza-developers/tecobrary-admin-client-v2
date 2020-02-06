@@ -1,8 +1,8 @@
-import AppBarContainer from "../components/organisms/containers/AppBarContainer";
+import AppBarContainer from "../src/components/organisms/containers/AppBarContainer";
 import * as React from "react";
-import UnFixedContainer from "../components/organisms/containers/UnFixedContainer";
-import UnFixedFrame from "../components/atoms/UnFixedFrame";
-import GithubLoginCard from "../components/organisms/GithubLoginCard";
+import UnFixedContainer from "../src/components/organisms/containers/UnFixedContainer";
+import UnFixedFrame from "../src/components/atoms/UnFixedFrame";
+import GithubLoginCard from "../src/components/organisms/GithubLoginCard";
 
 const Index = () => {
     return (

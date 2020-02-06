@@ -1,7 +1,7 @@
 import * as React from "react";
-import AppBarContainer from "../../components/organisms/containers/AppBarContainer";
-import DashBoardTemplate from "../../components/templates/DashBoardTemplate";
-import {IHistory, IWishBook} from "../../models/interfaces";
+import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
+import DashBoardTemplate from "../../src/components/templates/DashBoardTemplate";
+import {IHistory, IWishBook} from "../../src/models/interfaces";
 
 const longTerms: IHistory[] = [
     {

@@ -1,4 +1,4 @@
-import SearchBookInputContext from "../../src/contexts/SearchBookInputContext";
+import SearchBookInputContext from "../../contexts/SearchBookInputContext";
 import {Col, FormControl, InputGroup} from "react-bootstrap";
 import * as React from "react";
 
