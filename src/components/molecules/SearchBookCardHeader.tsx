@@ -1,6 +1,6 @@
 import {Row} from "react-bootstrap";
-import SearchBookCardInput from "../organisms/SearchBookCardInput";
-import SearchBookCardButton from "../organisms/SearchBookCardButton";
+import SearchBookCardInput from "./SearchBookCardInput";
+import SearchBookCardButton from "./SearchBookCardButton";
 import * as React from "react";
 
 const SearchBookCardHeader = () => {

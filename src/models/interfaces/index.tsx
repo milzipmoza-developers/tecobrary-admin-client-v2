@@ -25,3 +25,14 @@ export interface ISearchBook {
     isbn: string;
     description: string;
 }
+
+export interface ILibraryBook {
+    id: number;
+    title: string;
+    image: string;
+    author: string;
+    publisher: string;
+    isbn: string;
+    description: string;
+    hasMany: number;
+}
