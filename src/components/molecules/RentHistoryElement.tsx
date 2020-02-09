@@ -1,7 +1,7 @@
 import {Row} from "react-bootstrap";
 import RentHistoryItem from "../atoms/RentHistoryItem";
 import * as React from "react";
-import {IHistory} from "../../pages/dashboard";
+import {IHistory} from "../../models/interfaces";
 
 const RentHistoryElement = (history: IHistory) => {
 

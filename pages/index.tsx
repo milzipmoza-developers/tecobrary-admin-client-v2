@@ -1,18 +1,18 @@
-import AppBarLayout from "../components/templates/AppBarLayout";
+import AppBarContainer from "../src/components/organisms/containers/AppBarContainer";
 import * as React from "react";
-import UnFixedLayout from "../components/templates/UnFixedLayout";
-import UnFixedFrame from "../components/atoms/UnFixedFrame";
-import GithubLoginCard from "../components/organisms/GithubLoginCard";
+import UnFixedContainer from "../src/components/organisms/containers/UnFixedContainer";
+import UnFixedFrame from "../src/components/atoms/UnFixedFrame";
+import GithubLoginCard from "../src/components/organisms/GithubLoginCard";
 
 const Index = () => {
     return (
-        <AppBarLayout isLoggedIn={false}>
-            <UnFixedLayout>
+        <AppBarContainer isLoggedIn={false}>
+            <UnFixedContainer>
                 <UnFixedFrame>
                     <GithubLoginCard/>
                 </UnFixedFrame>
-            </UnFixedLayout>
-        </AppBarLayout>
+            </UnFixedContainer>
+        </AppBarContainer>
     );
 };
 

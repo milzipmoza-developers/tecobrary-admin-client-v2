@@ -5,7 +5,7 @@ interface IProps {
     children: any;
 }
 
-const ContentLayout = ({children}: IProps) => (
+const ContentContainer = ({children}: IProps) => (
     <Row style={{justifyContent: 'center', width: '100%'}}>
         <Col lg={11} xl={8} style={{padding: '4px', minWidth: '1080px', marginTop: '28px', marginBottom: '28px'}}>
             {children}
@@ -13,4 +13,4 @@ const ContentLayout = ({children}: IProps) => (
     </Row>
 );
 
-export default ContentLayout;
+export default ContentContainer;

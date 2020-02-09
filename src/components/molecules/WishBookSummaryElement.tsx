@@ -1,7 +1,7 @@
 import RentHistoryItem from "../atoms/RentHistoryItem";
 import {Button, Row} from "react-bootstrap";
 import * as React from "react";
-import {IWishBook} from "../../pages/dashboard";
+import {IWishBook} from "../../models/interfaces";
 
 interface IProps {
     wishBook: IWishBook;

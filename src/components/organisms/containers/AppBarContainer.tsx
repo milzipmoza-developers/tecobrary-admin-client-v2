@@ -37,7 +37,7 @@ const LoggedInAppBar = () => (
     </Navbar>
 );
 
-const AppBarLayout = ({isLoggedIn, children}: IProps) => {
+const AppBarContainer = ({isLoggedIn, children}: IProps) => {
     return (
         <div style={style}>
             {isLoggedIn ? <LoggedInAppBar/> : <NotLoggedInAppBar/>}
@@ -48,4 +48,4 @@ const AppBarLayout = ({isLoggedIn, children}: IProps) => {
     );
 };
 
-export default AppBarLayout;
+export default AppBarContainer;

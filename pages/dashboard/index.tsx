@@ -1,10 +1,7 @@
 import * as React from "react";
-import AppBarLayout from "../../components/templates/AppBarLayout";
-import ContentLayout from "../../components/templates/ContentLayout";
-import {Col, Row} from "react-bootstrap";
-import LongTermRentHistoryCard from "../../components/organisms/LongTermRentHistoryCard";
-import LoginUserProfileCard from "../../components/organisms/LoginUserProfileCard";
-import WishBookSummaryCard from "../../components/organisms/WishBookSummaryCard";
+import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
+import DashBoardTemplate from "../../src/components/templates/DashBoardTemplate";
+import {IHistory, IWishBook} from "../../src/models/interfaces";
 
 const longTerms: IHistory[] = [
     {
@@ -73,40 +70,11 @@ const wishBooks: IWishBook[] = [
     },
 ];
 
-export interface IHistory {
-    rentDate: string;
-    title: string;
-    serialNumber: string;
-    userName: string;
-}
-
-export interface IWishBook {
-    id: string;
-    title: string;
-    userName: string;
-    buyLink: string;
-    createTime: string;
-}
-
 const Index = () => {
     return (
-        <AppBarLayout isLoggedIn={true}>
-            <ContentLayout>
-                <Row>
-                    <Col sm={8}>
-                        <LongTermRentHistoryCard histories={longTerms}/>
-                    </Col>
-                    <Col sm={4}>
-                        <LoginUserProfileCard userName="루피" userEmail="thedevluffy@gmail.com"/>
-                    </Col>
-                </Row>
-                <Row style={{marginTop: '24px'}}>
-                    <Col sm={12}>
-                        <WishBookSummaryCard wishBooks={wishBooks}/>
-                    </Col>
-                </Row>
-            </ContentLayout>
-        </AppBarLayout>
+        <AppBarContainer isLoggedIn={true}>
+            <DashBoardTemplate histories={longTerms} wishBooks={wishBooks}/>
+        </AppBarContainer>
     );
 };
 

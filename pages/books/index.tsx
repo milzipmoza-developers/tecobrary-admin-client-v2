@@ -1,14 +1,14 @@
 import * as React from "react";
-import AppBarLayout from "../../components/templates/AppBarLayout";
-import ContentLayout from "../../components/templates/ContentLayout";
+import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
+import ContentContainer from "../../src/components/organisms/containers/ContentContainer";
 
 const Index = () => {
     return (
-        <AppBarLayout isLoggedIn={true}>
-            <ContentLayout>
+        <AppBarContainer isLoggedIn={true}>
+            <ContentContainer>
                 장서 관리
-            </ContentLayout>
-        </AppBarLayout>
+            </ContentContainer>
+        </AppBarContainer>
     );
 };
 
