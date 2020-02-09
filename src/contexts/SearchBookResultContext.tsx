@@ -1,5 +1,6 @@
 import * as React from "react";
-import {ISearchBook} from "../../pages/books/create";
+import {ISearchBook} from "../models/interfaces";
+
 
 const SearchBookResultContext = React.createContext({
     searchBooks: [],
