@@ -2,13 +2,10 @@ import * as React from "react";
 import {useState} from "react";
 import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
 import ContentContainer from "../../src/components/organisms/containers/ContentContainer";
-import {Card} from "react-bootstrap";
 import {ILibraryBook} from "../../src/models/interfaces";
-import Divider from "../../src/components/atoms/Divider";
 import {useRouter} from "next/router";
-import LibraryBookCardFooter from "../../src/components/organisms/LibraryBookCardFooter";
 import LibraryBookCardBody from "../../src/components/organisms/LibraryBookCardBody";
-import LibraryBookCardHeader from "../../src/components/molecules/LibraryBookCardHeader";
+import BookListCardTemplate from "../../src/components/templates/BookListCardTemplate";
 
 const remoteSearchBooks: ILibraryBook[] = [
     {
@@ -135,15 +132,13 @@ const Index = () => {
     const selectBookClickHandler = (id: number) => () => {
         router.push(`/books/${id}`);
     };
+
     return (
         <AppBarContainer isLoggedIn={true}>
             <ContentContainer>
-                <Card>
-                    <LibraryBookCardHeader/>
+                <BookListCardTemplate title="장서 목록" page={page} onPageDown={onPageDown} onPageUp={onPageUp}>
                     <LibraryBookCardBody books={books} onClick={selectBookClickHandler}/>
-                    <Divider/>
-                    <LibraryBookCardFooter page={page} onPageDown={onPageDown} onPageUp={onPageUp}/>
-                </Card>
+                </BookListCardTemplate>
             </ContentContainer>
         </AppBarContainer>
     );

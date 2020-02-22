@@ -2,7 +2,11 @@ import {useRouter} from "next/router";
 import {Button, Card} from "react-bootstrap";
 import * as React from "react";
 
-const LibraryBookCardHeader = () => {
+interface IProps {
+    children: string;
+}
+
+const BookListCardHeader = ({children}: IProps) => {
     const router = useRouter();
 
     const enrollButtonClickHandler = () => {
@@ -14,7 +18,7 @@ const LibraryBookCardHeader = () => {
             <div style={{display: 'flex', flexDirection: 'row'}}>
                 <div style={{flex: 13, display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                     <div style={{width: 'fit-content'}}>
-                        장서 목록
+                        {children}
                     </div>
                 </div>
                 <div style={{flex: 1}}>
@@ -25,4 +29,4 @@ const LibraryBookCardHeader = () => {
     );
 };
 
-export default LibraryBookCardHeader;
+export default BookListCardHeader;

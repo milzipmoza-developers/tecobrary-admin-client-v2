@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const LibraryBookPageContext = React.createContext({
+const BookListPageContext = React.createContext({
     page: 1,
     onPageDown: () => {
 
@@ -10,4 +10,4 @@ const LibraryBookPageContext = React.createContext({
     },
 });
 
-export default LibraryBookPageContext;
+export default BookListPageContext;
