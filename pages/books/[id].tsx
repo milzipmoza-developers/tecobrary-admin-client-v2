@@ -2,11 +2,10 @@ import * as React from "react";
 import {useEffect, useState} from "react";
 import AppBarContainer from "../../src/components/organisms/containers/AppBarContainer";
 import ContentContainer from "../../src/components/organisms/containers/ContentContainer";
-import {Card, Image} from "react-bootstrap";
 import {useRouter} from "next/router";
 import {ILibraryBook} from "../../src/models/interfaces";
 import BookRentListCard from "../../src/components/organisms/BookRentListCard";
-import CardButtonHeader from "../../src/components/molecules/CardButtonHeader";
+import BookDetailCard from "../../src/components/organisms/BookDetailCard";
 
 const mockLibraryBook: ILibraryBook = {
     id: 8,
@@ -36,20 +35,7 @@ const Index = () => {
     return (
         <AppBarContainer isLoggedIn={true}>
             <ContentContainer>
-                <Card>
-                    <CardButtonHeader title="장서 상세 정보" buttonName="정보 수정" disabled={true}/>
-                    <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <div style={{flex: 2, minHeight: '250px', maxHeight: '250px'}}>
-                            <Image src={libraryBook ? libraryBook.image : null} fluid style={{width: '100%', height: '100%'}}/>
-                        </div>
-                        <div style={{flex: 9, padding: '12px', display: 'flex', flexDirection: 'column'}}>
-                            <div style={{display: 'flex', flexDirection: 'row'}}>
-                                <div style={{flex: 2}}>제목</div>
-                                <div style={{flex: 10}}>글쓰기</div>
-                            </div>
-                        </div>
-                    </div>
-                </Card>
+                <BookDetailCard libraryBook={libraryBook}/>
                 <BookRentListCard bookId={id} onClick={addSerialBtnClickHandler}/>
             </ContentContainer>
         </AppBarContainer>
