@@ -36,3 +36,9 @@ export interface ILibraryBook {
     description: string;
     hasMany: number;
 }
+
+export interface ISerialInfo {
+    serialNumber: number;
+    rentStatus: boolean;
+    rentUser: string;
+}
