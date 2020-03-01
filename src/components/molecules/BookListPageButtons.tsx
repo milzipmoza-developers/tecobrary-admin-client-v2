@@ -1,10 +1,10 @@
-import LibraryBookPageContext from "../../contexts/LibraryBookPageContext";
+import BookListPageContext from "../../contexts/BookListPageContext";
 import {Button, ButtonGroup} from "react-bootstrap";
 import * as React from "react";
 
-const LibraryBookPageButtons = () => {
+const BookListPageButtons = () => {
     return (
-        <LibraryBookPageContext.Consumer>
+        <BookListPageContext.Consumer>
             {({page, onPageDown, onPageUp}) => (
                 <div style={{height: '40px', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
                     <ButtonGroup aria-label="Basic example">
@@ -14,8 +14,8 @@ const LibraryBookPageButtons = () => {
                     </ButtonGroup>
                 </div>
             )}
-        </LibraryBookPageContext.Consumer>
+        </BookListPageContext.Consumer>
     )
 };
 
-export default LibraryBookPageButtons;
+export default BookListPageButtons;
